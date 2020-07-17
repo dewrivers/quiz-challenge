@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- FONT, CSS, BOOSTRAP LINKS -->
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+        <!--FONTS STYLE->font-family: 'Shadows Into Light', cursive; // font-family: 'Amatic SC', cursive; -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+       <title>Quiz</title> 
+    </head>
+
+    <body>
+        <header>
+            <h1>
+                Coding quiz
+            </h1>
+        </header>
+        
+        <!-- START WRAP  CONTENT-->
+        <div class="wrapper">
+        <h1> All done!!</h1>
+            <!-- START CONTENT AREA -->
+            <div class="container-score" id="content">
+                <p>Your Score is...</p>
+                <!--INPUT FOR INITIALS-->
+                <div class="input">
+                    <label for="initials">Enter Initials:</label>
+                    <input type="text" name="initials" id="initials" placeholder="Your Inicials 'R.R'" />
+                </div>
+            </div>
+                <!--CARD FOR HISTORY SCORE-->
+                  <div class="card">
+                    <h2>Highscores:</h2>
+                    <p><strong>Last Score:</strong> <span id="user-email"></span></p>
+                    <!--BUTTON FOR CLEAN HIGH SCORES-->
+                       <div class="button">
+                        <button type="button" class="btn btn1" id="btn" >Clean High Scores</button>
+                       </div>
+                  </div>
+            
+        <!-- END WRAP  CONTENT-->
+        <!--BUTTON AREA-->
+          <div class="row"  id="button">
+            <div class="colum">
+             <button type="button" class="btn" id="btn">Go Back</button>
+            </div>
+         </div>
+         <!--END BUTTON AREA-->
+    </body>
+    <script src="js/script.js"></script>
+</html>

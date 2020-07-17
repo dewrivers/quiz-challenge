@@ -1,0 +1,139 @@
+/* ---------------------------------------- */
+/*  BODY STYLE  */
+/* ---------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Shadows Into Light', cursive; 
+}
+/*.background {
+    
+    background:url(../imags/vertical.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    box-shadow: 5px 10px 18px #888888;
+}*/
+/* ---------------------------------------- */
+/*  HEADER STYLE  */
+/* ---------------------------------------- */
+header {
+  text-align: center;
+  color: tomato;
+  font-size: 30px;
+}
+h1{
+  margin:0;
+}
+h2{
+  text-align: center;
+  margin: 0;
+}
+/* ---------------------------------------- */
+/*  WRAPPER N CONTAINER STYLE  */
+/* ---------------------------------------- */
+.wrapper{
+    width: 700px;
+    height: 420PX;
+    border: 1px black solid;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 5px 10px 18px #888888;
+}
+.container{
+  margin: 15px auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-top: 0;
+  border: 1px black solid;
+  height: 230px;
+  font-size: 20px;
+}
+.container-score{
+  margin: 15px auto;
+  margin-bottom: 20px;
+  padding: 10px;
+  padding-top: 0;
+  border: 1px black solid;
+  height: 230px;
+  width: 400px;
+  font-size: 20px;
+  float: left;
+}
+
+/* ---------------------------------------- */
+/*  CARD FOR THE HISTORY SCORE STYLE  */
+/* ---------------------------------------- */
+.card {
+  background-color: #fff;
+  border: 1px solid #eceff1;
+  border-radius: 8px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
+    rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+  margin: 2%;
+  margin: auto;
+  margin: 15px;
+  padding: 20px;
+  height: 230px;
+  overflow: hidden;
+  position: relative;
+  float: right;
+}
+/* ---------------------------------------- */
+/*  BUTTONS STYLE  */
+/* ---------------------------------------- */
+.btn{
+  width: 100px;
+  background-color: tomato;
+  color:white;
+  height: 40px;
+  vertical-align: top;
+  font-size: 16PX;
+  font-family: 'Shadows Into Light', cursive; 
+  text-align: center;
+  border-width: 5px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 3s ease;
+  float: right;
+  margin-top: 20px;
+}
+.btn:hover {
+  background-color: #febc5d;
+}
+.btn1{
+  width: 150px;
+  
+}
+/* ---------------------------------------- */
+/*  INPUT INITIALS STYLE  */
+/* ---------------------------------------- */
+input {
+  background-color: #f1f3f4;
+  border-radius: 2px;
+  border-width: 0;
+  color: #5f6368;
+  font-size: 16px;
+  height: 45px;
+  line-height: 20px;
+  margin: 0;
+  margin-top: 10px;
+  max-width: 25%;
+  padding: 8px 8px 8px 8px;
+  transition-delay: 0s, 0s;
+  transition-duration: 0.2s, 0.2s;
+  transition-property: background-color, color;
+  transition-timing-function: ease, ease;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+
