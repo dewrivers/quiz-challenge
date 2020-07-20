@@ -14,13 +14,6 @@ body {
     font-size: 16px;
     font-family: 'Shadows Into Light', cursive; 
 }
-/*.background {
-    
-    background:url(../imags/vertical.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    box-shadow: 5px 10px 18px #888888;
-}*/
 /* ---------------------------------------- */
 /*  HEADER STYLE  */
 /* ---------------------------------------- */
@@ -42,11 +35,11 @@ h2{
   margin-top: 2px;
 }
 /* ---------------------------------------- */
-/*  WRAPPER N CONTAINER STYLE  */
+/*  WRAPPER AND CONTAINER STYLE  */
 /* ---------------------------------------- */
 .wrapper{
     width: 700px;
-    height: 420PX;
+    height: 480PX;
     border: 1px black solid;
     margin: 40px auto;
     padding: 20px;
@@ -58,7 +51,7 @@ h2{
   padding: 10px;
   padding-top: 0;
   border: 1px black solid;
-  height: 230px;
+  height: 280px;
   font-size: 20px;
 }
 .container-score{
@@ -118,6 +111,60 @@ h2{
   width: 150px;
   
 }
+/* ---------------------------------------- */
+/*  QUESTIONs AND ANSWERs STYLE  */
+/* ---------------------------------------- */
+.question-number,
+.question-text,
+.option-container,
+.next-question-btn,
+.answer-indicator{
+  width: 100%;
+}
+
+
+.question-number{
+  font-size: 18px;
+  font-weight: 600;
+}
+.question-text{
+  font-size: 22px;
+  color: tomato;
+  font-weight: 600;
+  padding: 10px 0;
+  margin: 0;
+}
+.option-container .option{
+  background-color: tomato;
+  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
+  rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
+  border: 1px solid #eceff1;
+  overflow: hidden;
+  padding: 10px;
+  font-size: 18px;
+  line-height: 22px;
+  color: white;
+  border-radius: 6px;
+  margin: 1%;
+  margin-bottom: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 3s ease;
+  text-transform: capitalize;
+}
+.option-container .option:hover{
+  background-color: #febc5d;
+}
+.answer-indicator div{
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  background-color: #cccccc;
+  border-radius: 50%;
+  margin-right: 3px;
+  
+}
+
 /* ---------------------------------------- */
 /*  INPUT INITIALS STYLE  */
 /* ---------------------------------------- */
