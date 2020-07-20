@@ -36,6 +36,11 @@ h2{
   text-align: center;
   margin: 0;
 }
+.pcolor{
+  color: tomato;
+  font-size: 1.3em;
+  margin-top: 2px;
+}
 /* ---------------------------------------- */
 /*  WRAPPER N CONTAINER STYLE  */
 /* ---------------------------------------- */
@@ -63,7 +68,7 @@ h2{
   padding-top: 0;
   border: 1px black solid;
   height: 230px;
-  width: 400px;
+  width: 300px;
   font-size: 20px;
   float: left;
 }
@@ -82,8 +87,9 @@ h2{
   margin: 15px;
   padding: 20px;
   height: 230px;
+  width: 300px;
   overflow: hidden;
-  position: relative;
+  position: sticky;
   float: right;
 }
 /* ---------------------------------------- */
@@ -120,19 +126,21 @@ input {
   border-radius: 2px;
   border-width: 0;
   color: #5f6368;
-  font-size: 16px;
-  height: 45px;
-  line-height: 20px;
+  font-size: 14px;
+  height: 35px;
+  line-height: 15px;
   margin: 0;
   margin-top: 10px;
-  max-width: 25%;
+  margin-right: 10px;
+  
   padding: 8px 8px 8px 8px;
   transition-delay: 0s, 0s;
   transition-duration: 0.2s, 0.2s;
   transition-property: background-color, color;
   transition-timing-function: ease, ease;
   vertical-align: middle;
-  width: 100%;
+  float: right;
+  
 }
 
 
