@@ -12,7 +12,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 16px;
-    font-family: 'Shadows Into Light', cursive; 
+    font-family: 'Roboto', sans-serif;
 }
 /* ---------------------------------------- */
 /*  HEADER STYLE  */
@@ -21,6 +21,7 @@ header {
   text-align: center;
   color: tomato;
   font-size: 30px;
+  font-family: 'Shadows Into Light', cursive; 
 }
 h1{
   margin:0;
@@ -45,27 +46,69 @@ h2{
     padding: 20px;
     box-shadow: 5px 10px 18px #888888;
 }
-.container{
+.wraper::before,
+.wraper::after{
+  content:"";
+  clear: both;
+  display: table;
+}
+.wrapper.hide{
+  display: none;
+  }
+.custom-box{
   margin: 15px auto;
   margin-bottom: 20px;
   padding: 10px;
   padding-top: 0;
   border: 1px black solid;
-  height: 280px;
+  height: 320px;
   font-size: 20px;
 }
-.container-score{
+
+.score-box{
   margin: 15px auto;
+  margin-top: 0;
   margin-bottom: 20px;
+  text-align: center;
   padding: 10px;
   padding-top: 0;
   border: 1px black solid;
-  height: 230px;
+  height: 380px;
   width: 300px;
   font-size: 20px;
   float: left;
 }
-
+.score-box.hide{
+  display: none;
+}
+.score-box h1{
+  font-size: 36px;
+  line-height: 42px;
+  color: #009688;
+}
+.score-box table{
+  width: 100%;
+}
+.score-box table td{
+  border: 1px solid #cccccc;
+  padding: 5px;
+  text-align: left;
+}
+.score-box .btn{
+  margin-right: 20px;
+}
+/* ---------------------------------------- */
+/*  TIMER STYLE  */
+/* ---------------------------------------- */
+.timer{
+  margin: auto;
+  float: right;
+  background-color: #fff;
+  border: 1px solid #eceff1;
+  font-size: 20px;
+  color: tomato;
+  
+}
 /* ---------------------------------------- */
 /*  CARD FOR THE HISTORY SCORE STYLE  */
 /* ---------------------------------------- */
@@ -89,7 +132,7 @@ h2{
 /*  BUTTONS STYLE  */
 /* ---------------------------------------- */
 .btn{
-  width: 100px;
+  width: 110px;
   background-color: tomato;
   color:white;
   height: 40px;
@@ -102,7 +145,8 @@ h2{
   cursor: pointer;
   transition: all 3s ease;
   float: right;
-  margin-top: 20px;
+  margin-bottom: 15px;
+  /*display: inline-block;*/
 }
 .btn:hover {
   background-color: #febc5d;
@@ -124,24 +168,26 @@ h2{
 
 
 .question-number{
-  font-size: 18px;
+  font-size: 33px;
   font-weight: 600;
+  color: tomato;
 }
 .question-text{
-  font-size: 22px;
-  color: tomato;
+  font-size: 25px;
   font-weight: 600;
   padding: 10px 0;
   margin: 0;
 }
 .option-container .option{
   background-color: tomato;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  font-weight: 500;
   box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
   rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
   border: 1px solid #eceff1;
   overflow: hidden;
   padding: 10px;
-  font-size: 18px;
   line-height: 22px;
   color: white;
   border-radius: 6px;
@@ -151,6 +197,55 @@ h2{
   cursor: pointer;
   transition: all 3s ease;
   text-transform: capitalize;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+  position: relative;
+  overflow: hidden;
+  width: 80%%;
+}
+@keyframes fadeIn{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.already-answered{
+  pointer-events: none;
+}
+
+.option-container .correct::before{
+  content: "";
+  position: absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-color: green;
+  z-index: -1;
+  animation: slideInLeft .5s ease forwards;
+}
+@keyframes slideInLeft{
+  0%{
+    transform: translateX(-100%);
+  }
+  100%{
+    transform: translateX(0%);
+  }
+}
+
+
+.option-container .wrong::before{
+  content: "";
+  position: absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  width: 100%;
+  background-color: red;
+  z-index: -1;
+  animation: slideInLeft .5s ease forwards;
 }
 .option-container .option:hover{
   background-color: #febc5d;
@@ -159,12 +254,25 @@ h2{
   height: 30px;
   width: 30px;
   display: inline-block;
-  background-color: #cccccc;
+  background-color:white;
   border-radius: 50%;
   margin-right: 3px;
+  border: 1px solid black;
   
 }
-
+.answer-indicator div.correct{
+  background-image: url("../imags/correct.svg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+.answer-indicator div.wrong{
+  background-image: url("../imags/wrong.svg");
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 /* ---------------------------------------- */
 /*  INPUT INITIALS STYLE  */
 /* ---------------------------------------- */
@@ -179,7 +287,6 @@ input {
   margin: 0;
   margin-top: 10px;
   margin-right: 10px;
-  
   padding: 8px 8px 8px 8px;
   transition-delay: 0s, 0s;
   transition-duration: 0.2s, 0.2s;
@@ -189,6 +296,37 @@ input {
   float: right;
   
 }
+/* ---------------------------------------- */
+/*  QUERY ZISE FOR MAX WIDTH 640PX  */
+/* ---------------------------------------- */
+@media all and (max-width: 640px){
+  body{
+    width: 600px;
+    font-size: 14px;
+    
+  }
+  header{
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  .wrapper{
+    width: 330px;
+    height: 700px;
+  }
+  .custom-box{
+    width: 280px;
+    height: 480px;
+  }
+  .wrapper-score-box{
+    width: 330px;
+    height: 800px;
 
-
+  }
+  .card{
+    position: relative;
+    
+  }
+}
 

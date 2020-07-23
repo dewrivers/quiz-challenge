@@ -6,8 +6,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <!-- FONT, CSS, BOOSTRAP LINKS -->
         <link rel="stylesheet" href="assets/css/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-        <!--FONTS STYLE->font-family: 'Shadows Into Light', cursive; // font-family: 'Amatic SC', cursive; -->
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Shadows+Into+Light&display=swap=Roboto&display=swap" rel="stylesheet">        <!--FONTS STYLE->font-family: 'Shadows Into Light', cursive; // font-family: 'Amatic SC', cursive; -->
+        
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
        <title>Quiz</title> 
     </head>
@@ -19,30 +19,94 @@
             </h1>
         </header>
         
-        <!-- START WRAP  CONTENT-->
-        <div class="wrapper">
-            <h1> Instrucccions</h1>
-            <!-- START CONTENT AREA -->
-            <div class="container" id="content">
+        <!-- WRAP START POINT CONTENT -->
+        <div class="wrapper home-box ">
+            <div class="show-timer"></div>
+            <h1> Total number of questions: <span class="total-questions"></span></h1>
+            <div class="home-box custom-box">
+           
+                <h2 class="pcolor">Instruccions</h2>
                 <p>Think fast..<br>
                     Answer the questions in the following code-related questionnaire as quickly as possible,
                      remember that you are going against the clock ... 
                      and every second counts, each wrong answer will cost you time, 
                      10 seconds will be taken from your score/time  .
                     I wish you good luck!!</p>
+              
             </div>
-        <!-- END WRAP  CONTENT-->
-        <!--BUTTON AREA-->
-        <div class="row"  id="button">
-            <div class="colum">
-              <a href="quiz.html">
-              <button type="button" class="btn" id="btn" >START</button>
-              </a>  
-            </div>
-         </div>
+            <button type="button" class="btn" onclick="startQuiz()">START QUIZ</button>
+        </div>
 
-         
-         
+          <!-- WRAP QUIZ CONTENT -->
+        <div class="wrapper wrapper-quiz-box hide">
+            <div class="timer"></div> 
+            <div class="question-number">
+            </div>
+        <div class="quiz-box custom-box">
+            <div class="question-text">
+            </div>
+            <div class="option-container">
+            </div>
+        </div>
+        <div class="next-question-btn">
+            <button type="button" class="btn" onclick="next()">Next</button>
+        </div>
+        <div class="answer-indicator"></div>
+        </div>
+        </div>
+          <!-- WRAP ALL DONE CONTENT -->
+        <div class="wrapper wrapper-score-box hide" >
+           <h1> All done!!</h1>
+           <div class="score-box">
+            <h2 class="pcolor">Your Score is...</h2>
+                 <table>
+                     <tr>
+                         <td>Total Question</td>
+                         <td><span class="total-questions"></span></td>
+                     </tr>
+                     <tr>
+                         <td>Attempt</td>
+                         <td><span class="total-attempt"></span></td>
+                    </tr>
+                    <tr>
+                         <td>Correct</td>
+                         <td><span class="total-correct"></span></td>
+                    </tr>
+                    <tr>
+                         <td>Wrong</td>
+                         <td><span class="total-wrong"></span></td>
+                    </tr>
+                    <tr>
+                         <td>Percentage</td>
+                         <td><span class="percentage"></span></td>
+                   </tr>
+                   <tr>
+                         <td>Your Total Score</td>
+                         <td><span class="total-score"></span></td>
+                   </tr>
+                 </table>   
+            <!--INPUT FOR INITIALS-->
+            <div class="input">
+            <label for="initials pcolor">Enter Initials:   </label>
+            <input type="text" name="initials" id="initials" placeholder="Your Inicials 'R.R'">
+            </div>
+           </div>
+            <!--CARD FOR HISTORY SCORE-->
+            <div class="card">
+                    <h2>Highscores:</h2>
+                    <p class="pcolor"><strong>Last Score:</strong> <span id="user-email"></span></p>
+                    <!--BUTTON FOR CLEAN HIGH SCORES-->
+
+                    <div class="button">
+                       <button type="button" class="btn btn1" id="btn" >Clean High Scores</button>
+                    </div>
+            </div>
+    <div class="row"  id="button">
+     <button type="button" class="btn" onclick="tryAgainQuiz()">Try Again</button>
+     <button type="button" class="btn" onclick="goToHome()">Go To Home</button>
+    </div>
     </body>
+    <script src="js/questions.js"></script>
+    <script src="js/app.js"></script>
     
 </html>
